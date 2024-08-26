@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+
+class NoteItem extends StatelessWidget {
+  NoteItem({super.key,required this.color});
+dynamic color;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+          padding: const EdgeInsets.only(top: 24,bottom: 24,left: 16,),
+      decoration: BoxDecoration(
+        color: color,
+    borderRadius: BorderRadius.circular(16)
+    
+    
+      ),
+      child: Column(
+        
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          ListTile(
+            title: Text("Flutter tips",style: TextStyle(color:Colors.black,fontSize: 26,fontWeight: FontWeight.w400),),
+        
+            subtitle: Padding(
+              padding: const EdgeInsets.only(top: 16,bottom: 16),
+              child: Text("Build your career with Yasmine Khedr",style: TextStyle(color: Colors.black.withOpacity(.5),fontSize: 18),),
+            ),
+            trailing:  IconButton(icon:Icon(Icons.delete,color: Colors.black,size: 40,), onPressed: () {
+        
+      },),
+          
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 24),
+            child: Text("May 8,2024",style: TextStyle(color: Colors.black.withOpacity(.4),fontSize: 16),),
+          )
+        ],
+      ),
+      
+    );
+  }
+}
